@@ -1,0 +1,14 @@
+.header {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  /* background-color: #212529; */
+  border-bottom: 3px solid #fff;
+}
+
+.logo h2 {
+  padding: 2rem;
+  border-right: 2px solid #fff;
+}
