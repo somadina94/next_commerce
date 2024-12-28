@@ -1,13 +1,17 @@
 import mongoose, { Document, Model, Schema } from "mongoose";
 
+console.log("rans");
+
 interface User extends Document {
   name: string;
   email: string;
   password?: string;
   id: string;
+  role: string;
+  createdAt: Date;
 }
 
-const UserSchema: Schema<User> = new mongoose.Schema({
+const UserSchema: Schema<User> = new mongoose.Schema<User>({
   name: {
     type: String,
     required: [true, "Please provide your fullname"],
@@ -20,6 +24,15 @@ const UserSchema: Schema<User> = new mongoose.Schema({
   password: {
     type: String,
     required: false,
+  },
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user",
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
   },
 });
 
