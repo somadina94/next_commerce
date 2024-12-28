@@ -7,12 +7,21 @@ if (!MONGODB_URI) {
 }
 
 export default async function connectToDatabase() {
+  // Log connection state
   if (mongoose.connection.readyState === 1) {
-    return mongoose;
+    console.log("Already connected to MongoDB.");
+    return mongoose; // Already connected
   }
 
   const opts = { bufferCommands: false };
 
-  await mongoose.connect(MONGODB_URI!, opts);
-  return mongoose;
+  try {
+    // Establish a new connection to MongoDB
+    await mongoose.connect(MONGODB_URI as string, opts);
+    console.log("Connected to MongoDB.");
+    return mongoose;
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+    throw error;
+  }
 }
