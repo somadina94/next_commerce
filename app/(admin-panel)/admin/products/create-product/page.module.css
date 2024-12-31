@@ -1,64 +1,18 @@
-.login {
-  max-width: 60rem;
-  margin: auto;
-  margin-top: 4rem;
-  background: linear-gradient(45deg, #212529, #495057);
-  padding: 1rem;
-  border-radius: 12px;
-  position: relative;
-}
-
-.login h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.services {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.google {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.google span {
-  font-size: 1.6rem;
-  padding: 0 1rem;
-}
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.links a {
-  font-size: 2rem;
-  color: #228be6;
-}
-
-.links a:hover {
-  color: blue;
-}
-
 .form {
   max-width: 60rem;
   margin: auto;
   border-radius: 12px;
   padding: 2rem;
+  margin: 4rem auto;
   position: relative;
+  background: linear-gradient(45deg, #212529, #495057);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .group {
@@ -106,6 +60,18 @@
   border-radius: 8px;
 }
 
+.group textarea {
+  max-width: 80rem;
+  width: 100%;
+  border: none;
+  height: 10rem;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  color: #fff;
+  outline: none;
+  border-radius: 8px;
+}
+
 .action {
   display: flex;
   flex-direction: column;
@@ -141,6 +107,14 @@
 
 .invalid label {
   color: red;
+}
+
+.invalid input {
+  border: 1px solid red;
+}
+
+.invalid textarea {
+  border: 1px solid red;
 }
 
 .group span {

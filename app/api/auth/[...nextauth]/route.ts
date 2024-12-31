@@ -73,7 +73,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async signIn({ account, profile }) {
       let existingUser;
-      if (account?.provider === "github") {
+      if (account?.provider === "github" || account?.provider === "google") {
         await connectToDatabase();
 
         existingUser = await User.findOne({

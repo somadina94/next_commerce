@@ -4,7 +4,10 @@
   justify-content: space-between;
   align-items: center;
   height: 8rem;
-  border-bottom: 3px solid #fff;
+  margin-bottom: 4rem;
+  background-color: #212529;
+  position: sticky;
+  top: 0;
 }
 
 .logo h2 {

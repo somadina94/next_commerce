@@ -1,0 +1,35 @@
+.user {
+  background-color: #212529;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.content span {
+  font-size: 1.4rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  background-color: red;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
