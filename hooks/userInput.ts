@@ -7,7 +7,9 @@ const useInput = (validateValue: (value: string) => boolean) => {
   const enteredValueIsValid = validateValue(enteredValue);
   const enteredValueIsInvalid = !enteredValueIsValid && isTouched;
 
-  const valueInputChangedHandler = (event: ChangeEvent<HTMLInputElement>) => {
+  const valueInputChangedHandler = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setEnteredValue(event.target.value);
   };
 

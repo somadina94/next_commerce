@@ -4,10 +4,9 @@ import classes from "./nav.module.css";
 export default function Nav() {
   return (
     <nav className={classes.nav}>
-      <Link href="/products">PRODUCTS</Link>
-      <Link href="/users">USERS</Link>
-      <Link href="/orders">ORDERS</Link>
-      <Link href="/sign-in">SIGN IN</Link>
+      <Link href="/admin/products">PRODUCTS</Link>
+      <Link href="/admin/users">USERS</Link>
+      <Link href="/admin/orders">ORDERS</Link>
       <button className={classes.signout}>SIGN OUT</button>
     </nav>
   );

@@ -11,6 +11,7 @@ import classes from "./page.module.css";
 import { signIn } from "next-auth/react";
 import Alert from "@/components/alerts/auth-alert";
 import Spinner from "@/components/UI/spinner";
+import Link from "next/link";
 
 export default function SignIn() {
   const router = useRouter();
@@ -130,6 +131,10 @@ export default function SignIn() {
             />
           </div>
           {passwordInputIsInvalid && <span>Please choose a password</span>}
+        </div>
+        <div className={classes.links}>
+          <Link href="/sign-up">Create Account</Link>
+          <Link href="/forgot-password">Forgot Password?</Link>
         </div>
         <div className={classes.action}>
           <button type="submit" disabled={!formIsValid}>
